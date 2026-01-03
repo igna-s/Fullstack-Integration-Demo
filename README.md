@@ -2,10 +2,8 @@
 
 > **Efficient employee management with a modern interface and a robust backend.**
 
-![Status](https://img.shields.io/badge/Status-In%20Development-green?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 
-**Note:** This project is designed primarily as an educational resource to learn about frameworks. It demonstrates the practical integration of **Django** for the backend and **React** for the frontend, serving as a comprehensive guide for full-stack development patterns.
+This project is designed primarily as an educational resource to learn about frameworks. It demonstrates the practical integration of **Django** for the backend and **React** for the frontend, serving as a comprehensive guide for full-stack development patterns.
 
 This Full Stack application simplifies personnel administration by combining the power of **Django** in the backend with the interactivity of **React** in the frontend, offering a smooth and pleasant user experience.
 
