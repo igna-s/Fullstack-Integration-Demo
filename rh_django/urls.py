@@ -1,0 +1,8 @@
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    # Incluir rutas de empleados bajo /api/
+    path('api/', include('empleados.urls')),
+]
