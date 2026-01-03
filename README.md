@@ -1,15 +1,17 @@
-# 👔 Sistema de Recursos Humanos
+# 👔 Human Resources System
 
-> **Gestión eficiente de empleados con una interfaz moderna y un backend robusto.**
+> **Efficient employee management with a modern interface and a robust backend.**
 
-![Status](https://img.shields.io/badge/Status-En%20Desarrollo-green?style=for-the-badge)
-![License](https://img.shields.io/badge/Licencia-MIT-blue?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-In%20Development-green?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 
-Este proyecto es una aplicación Full Stack diseñada para simplificar la administración de personal. Combina la potencia de **Django** en el backend con la interactividad de **React** en el frontend, ofreciendo una experiencia de usuario fluida y agradable.
+**Note:** This project is designed primarily as an educational resource to learn about frameworks. It demonstrates the practical integration of **Django** for the backend and **React** for the frontend, serving as a comprehensive guide for full-stack development patterns.
+
+This Full Stack application simplifies personnel administration by combining the power of **Django** in the backend with the interactivity of **React** in the frontend, offering a smooth and pleasant user experience.
 
 ---
 
-## 🚀 Tecnologías
+## 🚀 Technologies
 
 ### Backend
 ![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
@@ -25,68 +27,69 @@ Este proyecto es una aplicación Full Stack diseñada para simplificar la admini
 
 ---
 
-## 🛠️ Instalación y Configuración
+## 🛠️ Installation and Configuration
 
-Sigue estos pasos para levantar el proyecto en tu entorno local.
+Follow these steps to set up the project locally.
 
 ### 1. Backend (Django)
 
-Navega a la carpeta raíz donde se encuentra `manage.py`:
+Navigate to the root folder where `manage.py` is located:
 
 ```bash
-# 1. Crear entorno virtual (opcional pero recomendado)
+# 1. Create virtual environment (optional but recommended)
 python -m venv venv
-source venv/bin/activate  # En Windows: venv\Scripts\activate
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-# 2. Instalar dependencias
-# (Asegúrate de tener mysqlclient, djangorestframework, django-cors-headers)
+# 2. Install dependencies
+# (Ensure you have mysqlclient, djangorestframework, django-cors-headers)
 pip install django djangorestframework django-cors-headers mysqlclient
 
-# 3. Configurar Base de Datos
-# Asegúrate de tener MySQL corriendo y crea una base de datos llamada 'recursos_humanos_db'
-# usuario: root, pass: admin (o ajusta en settings.py)
+# 3. Configure Database
+# Ensure MySQL is running and create a database named 'recursos_humanos_db'
+# user: root, pass: admin (or adjust in settings.py)
 
-# 4. Migraciones
+# 4. Migrations
 python manage.py makemigrations
 python manage.py migrate
 
-# 5. Correr servidor
+# 5. Run server
 python manage.py runserver 8080
 ```
 
-El backend estará disponible en `http://localhost:8080`.
+The backend will be available at `http://localhost:8080`.
 
 ### 2. Frontend (React + Vite)
 
-Navega a la carpeta `rh-react`:
+Navigate to the `rh-react` folder:
 
 ```bash
 cd rh-react
 
-# 1. Instalar dependencias
+# 1. Install dependencies
 npm install
 
-# 2. Correr servidor de desarrollo
+# 2. Run development server
 npm run dev
 ```
 
-El frontend estará disponible generalmente en `http://localhost:5173`.
+The frontend will generally be available at `http://localhost:5173`.
 
 ---
 
-## 📸 Vistazo Rápido
+## 📸 Quick Look
 
-*(Aquí puedes agregar capturas de pantalla de tu aplicación funcionando)*
+*(Add screenshots of your application running here)*
 
-| Listado de Empleados | Agregar Empleado |
+| Employee List | Add Employee |
 |:--------------------:|:----------------:|
-| ![Listado](/ruta/a/screenshot1.png) | ![Formulario](/ruta/a/screenshot2.png) |
+| ![List](/path/to/screenshot1.png) | ![Form](/path/to/screenshot2.png) |
 
 ---
 
-## ✨ Características Principales
+## ✨ Main Features
 
-*   **CRUD Completo:** Crear, leer, actualizar y eliminar registros de empleados.
-*   **API RESTful:** Comunicación eficiente entre cliente y servidor.
-*   **Diseño Responsivo:** Interfaz adaptable a diferentes dispositivos.
-*   **Validaciones:** Manejo de errores y validación de datos en ambos extremos.
+*   **Full CRUD:** Create, read, update, and delete employee records.
+*   **RESTful API:** Efficient communication between client and server.
+*   **Responsive Design:** Interface adaptable to different devices.
+*   **Validations:** Error handling and data validation on both ends.
+
