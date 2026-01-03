@@ -1,7 +1,7 @@
 # 👔 Human Resources System
 
 
-
+![](Screenshot%202026-01-03%20185326.png)
 
 This project is designed primarily as an educational resource to learn about frameworks. It demonstrates the practical integration of **Django** for the backend and **React** for the frontend, serving as a comprehensive guide for full-stack development. It doesn't have production security yet.
 
