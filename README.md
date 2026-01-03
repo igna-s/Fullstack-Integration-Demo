@@ -39,7 +39,7 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 # 2. Install dependencies
 # (Ensure you have mysqlclient, djangorestframework, django-cors-headers)
-pip install django djangorestframework django-cors-headers mysqlclient
+pip install django djangorestframework django-cors-headers mysqlclient pymysql
 
 # 3. Configure Database
 # Ensure MySQL is running and create a database named 'recursos_humanos_db'
