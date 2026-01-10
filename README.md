@@ -85,15 +85,6 @@ npm run dev
 
 The frontend will generally be available at `http://localhost:5173`.
 
----
-
-## 📸 Quick Look
-
-*(Add screenshots of your application running here)*
-
-| Employee List | Add Employee |
-|:--------------------:|:----------------:|
-| ![List](/path/to/screenshot1.png) | ![Form](/path/to/screenshot2.png) |
 
 ---
 
