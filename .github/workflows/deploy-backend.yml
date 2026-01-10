@@ -30,8 +30,8 @@ jobs:
         run: |
           # Create staticfiles directory if it doesn't exist
           mkdir -p staticfiles
-          # Run collectstatic. Environment variables are mocked for build.
-          export SECRET_KEY='build_secret_key'
+          # Run collectstatic.
+          export SECRET_KEY='${{ secrets.SECRET_KEY }}'
           export DEBUG='False'
           export ALLOWED_HOSTS='*'
           python manage.py collectstatic --noinput
