@@ -24,6 +24,17 @@ This project is designed primarily as an educational resource to learn about fra
 
 ---
 
+## ☁️ Deployment
+
+This project is configured to be deployed on **Azure Free Tier**:
+- **Backend**: Azure App Service (F1 Plan, Linux)
+- **Frontend**: Azure Static Web Apps (Free Plan)
+
+👉 **[Read the Deployment Guide](DEPLOY_AZURE.md)** for step-by-step instructions.
+
+---
+
+
 ## 🛠️ Installation and Configuration
 
 Follow these steps to set up the project locally.
@@ -38,8 +49,7 @@ python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 # 2. Install dependencies
-# (Ensure you have mysqlclient, djangorestframework, django-cors-headers)
-pip install django djangorestframework django-cors-headers mysqlclient pymysql
+pip install -r requirements.txt
 
 # 3. Configure Database
 # Ensure MySQL is running and create a database named 'recursos_humanos_db'
