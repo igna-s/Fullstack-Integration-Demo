@@ -1,0 +1,46 @@
+name: Deploy Backend to Azure App Service
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'rh_django/**'
+      - 'requirements.txt'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout GitHub Actions
+        uses: actions/checkout@v4
+
+      - name: Set up Python version
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Collect Static Files
+        run: |
+          # Create staticfiles directory if it doesn't exist
+          mkdir -p staticfiles
+          # Run collectstatic. Environment variables are mocked for build.
+          export SECRET_KEY='build_secret_key'
+          export DEBUG='False'
+          export ALLOWED_HOSTS='*'
+          python manage.py collectstatic --noinput
+        env:
+            DJANGO_SETTINGS_MODULE: rh_django.settings
+
+      - name: Deploy to Azure Web App
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: '${{ secrets.AZURE_WEBAPP_NAME }}' # User needs to set this secret
+          publish-profile: '${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}' # User needs to set this secret
+          package: .
