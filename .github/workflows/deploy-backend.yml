@@ -37,6 +37,7 @@ jobs:
           python manage.py collectstatic --noinput
         env:
             DJANGO_SETTINGS_MODULE: rh_django.settings
+            AZURE_SQLITE_PERSISTENCE: 'True'
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
