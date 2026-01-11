@@ -37,7 +37,7 @@ This project is designed primarily as an educational resource to learn about fra
 This project is configured to be deployed on **Azure Free Tier**:
 
 - [Frontend – Azure Static Web Apps (F1 Plan, Linux)](https://jolly-tree-03b6dd510.1.azurestaticapps.net/)
-- [Backend – Azure App Service (Free Plan)](https://myfirstupload-backend.azurewebsites.net/api/)
+- [Backend – Azure App Service (Free Plan)](https://myfirstupload-backend.azurewebsites.net/api/empleados/)
 
 
 👉 **[Read the Deployment Guide](DEPLOY_AZURE.md)** for step-by-step instructions.
