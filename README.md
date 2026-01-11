@@ -32,7 +32,6 @@ This project is configured to be deployed on **Azure Free Tier**:
 
 👉 **[Read the Deployment Guide](DEPLOY_AZURE.md)** for step-by-step instructions.
 
-- [Backend – Azure App Service](https://myfirstupload-backend.azurewebsites.net/)
 - [Frontend – Azure Static Web Apps](https://jolly-tree-03b6dd510.1.azurestaticapps.net/)
 
 
