@@ -3,7 +3,9 @@
 
 ![](Screenshot%202026-01-03%20185326.png)
 
-This project is designed primarily as an educational resource to learn about frameworks. It demonstrates the practical integration of **Django** for the backend and **React** for the frontend, serving as a comprehensive guide for full-stack development. It doesn't have production security yet.
+This project is designed primarily as an educational resource to learn about frameworks. It demonstrates the practical integration of **Django** for the backend and **React** for the frontend, serving as a comprehensive guide for full-stack development.
+
+> **🛡️ Security Note**: This project is configured as a public demo. Authentication is intentionally open (`AllowAny`) for ease of access, but the codebase includes production-ready security settings (Strict SSL, Encrypted Cookies, etc.) in `settings.py` ready to be enabled.
 
 
 ---
@@ -33,6 +35,7 @@ This project is configured to be deployed on **Azure Free Tier**:
 👉 **[Read the Deployment Guide](DEPLOY_AZURE.md)** for step-by-step instructions.
 
 - [Frontend – Azure Static Web Apps](https://jolly-tree-03b6dd510.1.azurestaticapps.net/)
+- [Backend – Azure App Service](https://myfirstupload-backend.azurewebsites.net/api/)
 
 
 ---

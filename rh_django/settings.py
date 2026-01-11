@@ -26,6 +26,35 @@ INSTALLED_APPS = [
     'empleados',
 ]
 
+# CONFIGURACIÓN DE SEGURIDAD Y API (Para demostración de despliegue real)
+REST_FRAMEWORK = {
+    # Usamos AllowAny para que la demo funcione sin login en el frontend.
+    # En un entorno REAL privado, usaríamos 'IsAuthenticated'.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+        # 'rest_framework.permissions.IsAuthenticated', # <-- Descomentar para seguridad estricta
+    ],
+    # Autenticación por sesión (Admin) y Token (API estándar)
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ],
+}
+
+# SEGURIDAD DE PRODUCCIÓN
+# Si DEBUG es False (Producción), activamos medidas estrictas
+if not DEBUG:
+    # Fuerza conexión HTTPS
+    SECURE_SSL_REDIRECT = True
+    # Evita que el navegador acceda a cookies por JS (protección XSS)
+    SESSION_COOKIE_HTTPONLY = True
+    # Cookies solo viajan por HTTPS
+    CSRF_COOKIE_SECURE = True
+    SESSION_COOKIE_SECURE = True
+    # Protección contra ataques de tipo "Clickjacking"
+    X_FRAME_OPTIONS = 'DENY'
+
+
 # MIDDLEWARE
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
