@@ -4,7 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 export default function EditarEmpleado() {
 
-    const urlBase = import.meta.env.VITE_API_URL + '/empleados';
+    const urlBase = import.meta.env.VITE_API_URL + '/empleados/';
     let navigate = useNavigate();
 
     // useParams captura el id de la url (ej: /editar/5)
