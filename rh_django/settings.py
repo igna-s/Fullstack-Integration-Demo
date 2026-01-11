@@ -73,8 +73,17 @@ TEMPLATES = [
 WSGI_APPLICATION = 'rh_django.wsgi.application'
 
 # BASE DE DATOS
+# BASE DE DATOS
 # Si estamos en Azure (detectado por variable de entorno o ruta fija), usamos SQLite persistente
-if os.environ.get('AZURE_SQLITE_PERSISTENCE', 'False') == 'True':
+if os.environ.get('BUILD_MODE', 'False') == 'True':
+    # Modo construcción: Base de datos en memoria para que collectstatic no falle
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': ':memory:',
+        }
+    }
+elif os.environ.get('AZURE_SQLITE_PERSISTENCE', 'False') == 'True':
     # Azure App Service Linux monta /home, así que guardamos la DB ahí para persistencia
     DATABASES = {
         'default': {
