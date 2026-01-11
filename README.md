@@ -85,6 +85,15 @@ npm run dev
 
 The frontend will generally be available at `http://localhost:5173`.
 
+### 🌍 Local vs Cloud Execution
+
+The project uses **Environment Variables** to automatically switch the Backend URL:
+
+- **Local**: Uses `.env.development` -> `http://localhost:8080/api`
+- **Cloud**: Uses `.env.production` -> `https://myfirstupload-backend.azurewebsites.net/api`
+
+You don't need to change any code. Just run `npm run dev` for local development, or `npm run build` for production deployment.
+
 
 ---
 

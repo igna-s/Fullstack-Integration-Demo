@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 export default function ListadoEmpleados() {
 
-    const urlBase = "http://127.0.0.1:8080/api/empleados";
+    const urlBase = import.meta.env.VITE_API_URL;
     const [empleados, setEmpleados] = useState([]);
 
     useEffect(() => {
