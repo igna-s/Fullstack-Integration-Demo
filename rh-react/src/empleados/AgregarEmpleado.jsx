@@ -20,7 +20,7 @@ export default function AgregarEmpleado() {
 
     const onSubmit = async (e) => {
         e.preventDefault();
-        const urlBase = import.meta.env.VITE_API_URL;
+        const urlBase = import.meta.env.VITE_API_URL + '/empleados/';
         await axios.post(urlBase, empleado);
         // Redirigimos a la pagina de inicio
         navigate('/');

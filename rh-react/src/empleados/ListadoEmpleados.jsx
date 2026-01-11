@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 export default function ListadoEmpleados() {
 
-    const urlBase = import.meta.env.VITE_API_URL;
+    const urlBase = import.meta.env.VITE_API_URL + '/empleados';
     const [empleados, setEmpleados] = useState([]);
 
     useEffect(() => {
