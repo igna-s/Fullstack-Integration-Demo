@@ -24,18 +24,24 @@ This project is designed primarily as an educational resource to learn about fra
 ![Axios](https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 
+
+### ☁️ Cloud / Deployment
+![Azure App Service](https://img.shields.io/badge/Azure%20App%20Service-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
+![Azure Static Web Apps](https://img.shields.io/badge/Azure%20Static%20Web%20Apps-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
+
+
 ---
 
 ## ☁️ Deployment
 
 This project is configured to be deployed on **Azure Free Tier**:
-- **Backend**: Azure App Service (F1 Plan, Linux)
-- **Frontend**: Azure Static Web Apps (Free Plan)
+
+- [Frontend – Azure Static Web Apps (F1 Plan, Linux)](https://jolly-tree-03b6dd510.1.azurestaticapps.net/)
+- [Backend – Azure App Service (Free Plan)](https://myfirstupload-backend.azurewebsites.net/api/)
+
 
 👉 **[Read the Deployment Guide](DEPLOY_AZURE.md)** for step-by-step instructions.
 
-- [Frontend – Azure Static Web Apps](https://jolly-tree-03b6dd510.1.azurestaticapps.net/)
-- [Backend – Azure App Service](https://myfirstupload-backend.azurewebsites.net/api/)
 
 
 ---
