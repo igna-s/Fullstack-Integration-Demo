@@ -73,13 +73,18 @@ if 'CORS_ALLOWED_ORIGINS' in os.environ:
     CORS_ALLOWED_ORIGINS = os.environ.get('CORS_ALLOWED_ORIGINS').split(' ')
 else:
     CORS_ALLOWED_ORIGINS = [
-        "http://localhost:4200",  # Angular
-        "http://localhost:5173",  # React con Vite
+        "http://localhost:4200",
+        "http://localhost:5173",
+        "https://jolly-tree-03b6dd510.1.azurestaticapps.net", # Frontend en Azure
     ]
 
 # CSRF Trusted Origins (necesario para POSTs desde el frontend en otro dominio)
 if 'CSRF_TRUSTED_ORIGINS' in os.environ:
     CSRF_TRUSTED_ORIGINS = os.environ.get('CSRF_TRUSTED_ORIGINS').split(' ')
+else:
+    CSRF_TRUSTED_ORIGINS = [
+        "https://jolly-tree-03b6dd510.1.azurestaticapps.net",
+    ]
 
 ROOT_URLCONF = 'rh_django.urls'
 
