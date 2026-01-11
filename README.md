@@ -105,4 +105,3 @@ You don't need to change any code. Just run `npm run dev` for local development,
 *   **RESTful API:** Efficient communication between client and server.
 *   **Responsive Design:** Interface adaptable to different devices.
 *   **Validations:** Error handling and data validation on both ends.
-

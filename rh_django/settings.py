@@ -26,35 +26,6 @@ INSTALLED_APPS = [
     'empleados',
 ]
 
-# CONFIGURACIÓN DE SEGURIDAD Y API (Para demostración de despliegue real)
-REST_FRAMEWORK = {
-    # Usamos AllowAny para que la demo funcione sin login en el frontend.
-    # En un entorno REAL privado, usaríamos 'IsAuthenticated'.
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.AllowAny',
-        # 'rest_framework.permissions.IsAuthenticated', # <-- Descomentar para seguridad estricta
-    ],
-    # Autenticación por sesión (Admin) y Token (API estándar)
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.SessionAuthentication',
-        'rest_framework.authentication.BasicAuthentication',
-    ],
-}
-
-# SEGURIDAD DE PRODUCCIÓN
-# Si DEBUG es False (Producción), activamos medidas estrictas
-if not DEBUG:
-    # Fuerza conexión HTTPS
-    SECURE_SSL_REDIRECT = True
-    # Evita que el navegador acceda a cookies por JS (protección XSS)
-    SESSION_COOKIE_HTTPONLY = True
-    # Cookies solo viajan por HTTPS
-    CSRF_COOKIE_SECURE = True
-    SESSION_COOKIE_SECURE = True
-    # Protección contra ataques de tipo "Clickjacking"
-    X_FRAME_OPTIONS = 'DENY'
-
-
 # MIDDLEWARE
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -73,18 +44,13 @@ if 'CORS_ALLOWED_ORIGINS' in os.environ:
     CORS_ALLOWED_ORIGINS = os.environ.get('CORS_ALLOWED_ORIGINS').split(' ')
 else:
     CORS_ALLOWED_ORIGINS = [
-        "http://localhost:4200",
-        "http://localhost:5173",
-        "https://jolly-tree-03b6dd510.1.azurestaticapps.net", # Frontend en Azure
+        "http://localhost:4200",  # Angular
+        "http://localhost:5173",  # React con Vite
     ]
 
 # CSRF Trusted Origins (necesario para POSTs desde el frontend en otro dominio)
 if 'CSRF_TRUSTED_ORIGINS' in os.environ:
     CSRF_TRUSTED_ORIGINS = os.environ.get('CSRF_TRUSTED_ORIGINS').split(' ')
-else:
-    CSRF_TRUSTED_ORIGINS = [
-        "https://jolly-tree-03b6dd510.1.azurestaticapps.net",
-    ]
 
 ROOT_URLCONF = 'rh_django.urls'
 
